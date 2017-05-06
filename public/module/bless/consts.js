@@ -1,0 +1,17 @@
+export let canvas = document.getElementById('mycanvas')
+export let ctx = canvas.getContext('2d')
+export const cwidth = 600
+export const cheight = 520
+export let color = '#FDA936'
+export let shadowColor = '#FDA936'
+export let shadowOffsetY = -10
+export let shadowBlur = 20
+export let gtopcolor = '#FDA936'
+export let gmidcolor = 'white'
+export let bomcolor = '#494e85'
+export let globalAlpha = 0.8
+export let globalCompositeOperation = 'lighter'
+export let xincolor = '#241916'
+export let ztopcolor = '#DA1411'
+export let zmidcolor = '#9E1513'
+export let zbomcolor = '#720000'

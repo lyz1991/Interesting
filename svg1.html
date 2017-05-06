@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background-color: black;
+    }
+    p{
+      color: white;
+      font-size: 48px;
+      font-family: 'Kaiti TC';
+      text-align: center;
+    }
+    svg{
+      display: block;
+      background-color: black;
+      width: 75%;
+      margin: 20px auto;
+    }
+    text{
+      font-size: 24px;
+      font-family: 'Kaiti TC';
+    }
+
+  </style>
+</head>
+<body>
+<p>赤壁赋</p>
+<svg height="800" preserveAspectRatio="xMinYMin slice">
+  <text dx="120" x='20' y='270' fill="white" dy="20" id="text">
+    大江东去浪淘尽千古风流人物故垒西边人道是三国周郎赤壁</text>
+</svg>
+</body>
+<script>
+  var text = document.getElementById('text'),
+    len = text.innerHTML.length, y = [], x = []
+  var t = 0
+  function asign(t) {
+    y = []
+    for (var i = 0; i < len; i++) {
+      y.push(-60 * Math.cos(100*i+t))
+      x.push(10)
+
+    }
+  }
+  function render() {
+    text.setAttribute('dy', y.join(' '))
+    text.setAttribute('dx', x.join(' '))
+  }
+  function nextframe() {
+      t+=0.015
+     asign(t)
+    render()
+    requestAnimationFrame(nextframe)
+  }
+  nextframe()
+
+</script>
+</html>

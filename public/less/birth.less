@@ -1,0 +1,63 @@
+canvas{
+  background-color: black;
+  display: block;
+  margin: auto auto;
+}
+input{
+  display: none;
+}
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin:  0 auto;
+  animation: heart 9s linear infinite;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 0, 0, 1)), to(rgba(255,0, 156, 1)));
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin :100% 100%;
+  background-color: pink;
+}
+@keyframes heart {
+  0%{
+    transform: rotateZ(0deg);
+  }
+  25%{
+    transform: rotateZ(15deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75%{
+    transform: rotateZ(-15deg);
+  }
+  100%{
+    transform: rotateZ(0deg);
+  }
+}
+body{
+  background-color: black;
+}
+p{
+  text-align: center;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 0, 0, 1)), to(rgba(255,255, 0, 1)));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 50px;
+}

@@ -1,0 +1,38 @@
+{
+  "root": true,
+  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
+  "extends": "standard",
+  // required to lint *.vue files
+  "plugins": [
+    "html"
+  ],
+  "env":{
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module" //ָ����Դ�����ͣ������֡�script����module��
+  },
+  // add your custom rules here
+  "rules": {
+    "curly": 2,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-multiple-empty-lines": 2,
+    "no-undefined": 2,
+    "no-use-before-define": [2, "nofunc"],
+    "no-eval": 2,
+    "valid-typeof": 2,
+    // allow paren-less arrow functions
+    "arrow-parens": 0,
+    "eqeqeq": [0, "allow-null"],
+    "semi":[0],
+    "no-undef": 0,
+    "no-trailing-spaces": 2,
+    "eol-last": 2, // �ļ�ĩβǿ�ƻ���
+    "space-unary-ops": [2, { "words": true, "nonwords": false }],
+    "no-unused-vars": 2,
+    "array-bracket-spacing": [2, "never"], // ����֮���������ÿո����(,�ŵĺ���),����[]����ǰ�����пո�
+    // allow debugger during development
+    "no-debugger": 0
+}
+}

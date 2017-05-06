@@ -1,0 +1,9 @@
+export let i = 0
+export let state = true
+export let d = document
+export let canvas = d.getElementById('mycanvas')
+export let ctx = canvas.getContext('2d')
+export let cWith = d.documentElement.clientWidth
+export let color = 'white'
+export let strokewidth = 1
+export let cawidth = canvas.width
